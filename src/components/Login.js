@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from '../utils/firebase';
 import { addUser } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
+import { BODY_IMAGE } from '../utils/constants';
 
 const Login = () => {
 
@@ -69,7 +70,7 @@ const Login = () => {
       <div className="absolute">
         <img
           className="h-screen w-screen object-cover brightness-50"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/c0b69670-89a3-48ca-877f-45ba7a60c16f/2642e08e-4202-490e-8e93-aff04881ee8a/IN-en-20240212-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={BODY_IMAGE}
           alt="bg" />
       </div>
       <div className='relative h-screen flex items-center justify-center'>
