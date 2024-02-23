@@ -16,6 +16,14 @@
 - Update Profile
 - BugFix: if the user is not logged in Redirect /browse to Login Page and vice-versa
 - Unsubscibed to the onAuthStateChanged callback
+- Regiter TMDB API & create an app & get access token
+- Get Data from TMDB now playing movies list API
+- Custom Hook for Now Playing Movies
+- Create movieSlice
+- Update Store with movies Data
+- Fetch Data for Trailer Video
+- Update Store with Trailer Video Data
+- Embedded the Yotube video and make it autoplay and mute
 
 # Features
 - Login/Sign Up
