@@ -52,9 +52,9 @@ const Header = () => {
   }
 
   return (
-    <div className='absolute z-10 flex w-full flex-row items-center justify-between bg-gradient-to-b from-black px-3'>
+    <div className='absolute z-10 flex w-full flex-col md:flex-row items-center justify-between bg-gradient-to-b from-black px-3'>
       <img
-       className="cursor-pointer w-56"
+       className="cursor-pointer w-36 md:w-56"
        src={LOGO}
        alt="logo" />
        {user && (

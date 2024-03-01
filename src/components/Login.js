@@ -76,7 +76,7 @@ const Login = () => {
       <div className='relative h-screen flex items-center justify-center'>
         <form 
         onSubmit={(e) => e.preventDefault()}
-        className="w-3/12 p-12 rounded-lg bg-black bg-opacity-80 text-white">
+        className="w-3/4 md:w-3/12 p-12 rounded-lg bg-black bg-opacity-80 text-white">
           <h2 className=' text-3xl font-bold text-white'>
             {isSignInForm ? "Sign In" : "Sign Up"}
           </h2>
