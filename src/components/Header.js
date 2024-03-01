@@ -13,6 +13,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user)
+  const showGptSearch = useSelector((store => store.gpt.showGptSearch))
 
   const handleSignOut = () => {
     signOut(auth).then(() => {
@@ -58,7 +59,7 @@ const Header = () => {
        alt="logo" />
        {user && (
           <div className='flex space-x-3'>
-            <select 
+            {showGptSearch && <select 
             onChange={handleLanguageChange}
             className=' outline-none px-4 py-1 font-base bg-slate-500 text-green-100 text-[18px] rounded-md'>
             {
@@ -66,10 +67,11 @@ const Header = () => {
                 <option key={lang.identifire} value={lang.identifire}>{lang.name}</option>
               ))
             }
-            </select>
+            </select>}
             <button className=' bg-emerald-600 px-4 py-1 font-semibold text-white text-[18px] rounded-md'
-            onClick={handleGptSearchClick}
-            > GPT Search </button>
+            onClick={handleGptSearchClick}> 
+             {showGptSearch ? "Home" : "GPT Search" }
+            </button>
             <button 
             onClick={handleSignOut}
             className=' bg-red-500 px-3 py-1 text-white text-lg rounded-md font-semibold'>Sign Out</button>
